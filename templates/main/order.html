@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1> Order </h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Number</th>
+            <th>Id</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <th>{{order.date}}</th>
+            <th>{{order.customer.name}}</th>
+            <th>{{order.customer.number}}</th>
+            <th><a href={% url 'details' 2 %}>{{order.id}}</a></th>
+        </tr>        
+        {% endfor %}
+        <br/>
+    </table>
+{% endblock body %}

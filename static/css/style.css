@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: grey;
+}
+
+header a {
+    line-height: 50px;
+    padding-left: 10px;
+}

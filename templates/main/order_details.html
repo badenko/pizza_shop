@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h1> Order </h1>
+    <table>
+        <tr>
+            <th>{{order.date}}</th>
+            <th>{{order.customer.name}}</th>
+            <th>{{order.customer.number}}</th>
+            <th>{{order.id}}</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td colspan='3'>{{item.pizza.name}}{{item.beverage.name}}</td>
+            <td>{{item.pizza.price}}{{item.beverage.price}}</td>
+        </tr>
+        {% endfor %}        
+    </table>
+    <br/>
+    <a href={% url 'order' %}>return</a>
+{% endblock body %}
