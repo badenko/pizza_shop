@@ -20,7 +20,7 @@ def order_details(request, order_id=3):
     order = Order.objects.get(id=order_id)
     items = OrderItem.objects.filter(order=order)
     data = {'order': order, 'items': items}
-    return render(request, 'main/order_details.html', context=data) 
+    return render(request, 'main/order_details.html', context=data)
 
 def contact(request):
     data = {'Message': 'Data from context'}
