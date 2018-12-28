@@ -2,4 +2,10 @@
 
 {% block body %}
     <h1> INDEX <h1>
+    {% for pizza in pizzas %}
+    <div class='pizza-item'>
+        <img src="{{ MEDIA_URL}}/{{pizza.image}}">
+        <p>{{pizza.name}}</p>
+    </div>
+    {% endfor %}
 {% endblock body %}

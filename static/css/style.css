@@ -7,10 +7,27 @@ body {
 }
 
 header {
-    background-color: grey;
+    background-color: #363637;
+    margin: 0;
+    height: 50px;
 }
 
 header a {
     line-height: 50px;
     padding-left: 10px;
+    color: #ffb717;
+    text-decoration: none;
+}
+
+.main-content{
+    margin: auto;
+    background-color: azure;
+    border: dotted;
+    max-width: 900px;
+}
+
+.side-navigation{
+    margin: auto;
+    background-color: brown;
+    border: solid;
 }

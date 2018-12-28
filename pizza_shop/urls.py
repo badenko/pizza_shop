@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import index, order, order_details, contact
+from main.views import index, orders, order_details, contact
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('order', order, name='order'),
+    path('orders', orders, name='orders'),
     path('order/details/<int:order_id>', order_details, name='details'),
     path('contact', contact, name='contact'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
