@@ -20,6 +20,7 @@ class PizzaSize(models.Model):
 
 class Pizza(Product):
     size = models.ForeignKey(PizzaSize, on_delete=models.CASCADE, to_field='size')
+    description = models.CharField(max_length=500, blank=True, null=True)
 
 class Beverage(Product):
     volume = models.DecimalField(max_digits=2, decimal_places=1, blank=True, null=True)
