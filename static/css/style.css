@@ -37,7 +37,36 @@ header a {
     grid-gap: 15px 15px;
 }
 
+.product-grid-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .pizza-item {
+    margin: 15px;
+    padding: 10px 10px 10px 10px;
     background: coral;
+    border: solid;
+    border-radius: 15px;
+    max-width: 240px;
+}
+
+.pizza-image {
+    width: 200px;
+    height: 200px;
+}
+
+.pizza-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.item-price {
+    text-align: center;
+}
+
+.order-button {
+    width: 95%;
     border: solid;
 }

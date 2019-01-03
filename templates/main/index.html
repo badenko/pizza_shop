@@ -1,13 +1,25 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h1> INDEX </h1>
-    <div class="product-grid">
+    <div class="product-grid-flex">
     {% for pizza in pizzas %}
     <div class='pizza-item'>
-        <img src="{{ MEDIA_URL}}/{{pizza.image}}">
-        <p>{{pizza.name}}</p>
-        <p>{{pizza.description}}</p>
+        <img class="pizza-image" src="{{ MEDIA_URL}}/{{pizza.image}}">
+        <p class="pizza-title">{{pizza.name}}</p>
+        <p class="item-price">{{pizza.price}} грн</p>
+        <div>
+            <a class="order-button" href=#>замовити</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% for beverage in beverages %}
+    <div class='pizza-item'>
+        <img class="pizza-image" src="{{ MEDIA_URL}}/{{beverage.image}}">
+        <p class="pizza-title">{{beverage.name}}</p>
+        <p class="item-price">{{beverage.price}} грн</p>
+        <div>
+            <a class="order-button" href=#>замовити</a>
+        </div>
     </div>
     {% endfor %}
     </div>

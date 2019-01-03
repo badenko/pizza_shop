@@ -3,6 +3,7 @@ from django.db import models
 class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=5, decimal_places=2)
+    description = models.CharField(max_length=500, blank=True, null=True)
     image = models.ImageField(upload_to='product_image/')
 
     class Meta:
@@ -20,7 +21,6 @@ class PizzaSize(models.Model):
 
 class Pizza(Product):
     size = models.ForeignKey(PizzaSize, on_delete=models.CASCADE, to_field='size')
-    description = models.CharField(max_length=500, blank=True, null=True)
 
 class Beverage(Product):
     volume = models.DecimalField(max_digits=2, decimal_places=1, blank=True, null=True)

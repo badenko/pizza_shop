@@ -12,7 +12,6 @@ class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     status = models.CharField(max_length=20, choices=ORDER_STATUSES, default='Accepted')
     date = models.DateField(auto_now_add=True)
-    #date = models.DateField(auto_now_add=True)
     time = models.CharField(max_length=50, default=datetime.now().time().strftime("%H:%M"))
 
     def __str__(self):
