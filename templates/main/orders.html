@@ -14,7 +14,7 @@
             <th>{{order.date}}</th>
             <th>{{order.customer.name}}</th>
             <th>{{order.customer.number}}</th>
-            <th><a href={% url 'details' 2 %}>{{order.id}}</a></th>
+            <th><a href={% url 'order_details' order.id %}>{{order.id}}</a></th>
         </tr>        
         {% endfor %}
         <br/>
