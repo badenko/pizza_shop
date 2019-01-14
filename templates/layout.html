@@ -4,7 +4,8 @@
 <html>
     <head>        
         <link rel="stylesheet" type="text/css" href={% static 'css/style.css' %}>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src={% static 'jQuery/scripts.js' %}></script> 
         <title> Welcome </title>
     </head>
 
@@ -13,7 +14,7 @@
             <a href={% url 'index' %}>Home</a>
             <a href={% url 'orders' %}>Order</a>
             <a href={% url 'contact' %}>Contact</a>
-            <a href=#>Basket</a>
+            <a id="basket" href=#>Basket</a>
         </header>
         <div class="main-content">
             {% block body %}
